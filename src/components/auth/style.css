@@ -1,0 +1,71 @@
+/* Login page */
+.login-parent{
+    perspective: 1000px;
+}
+.login-parent::before{
+    position:absolute;
+    content:"";
+    right:0;
+    top:0;
+    transform: translate(50%,-50%);
+    height:172px;
+    width:172px;
+    background:#00c9bd;
+    border-radius: 50%;
+    z-index: -1;
+} 
+.login-parent::after{
+    position:absolute;
+    content:"";
+    bottom:0;
+    left:0;
+    transform: translate(-50%,50%);
+    height:200px;
+    width:200px;
+    background:#e49129;
+    border-radius: 50%;
+    z-index: -1;
+} 
+.login{
+    box-shadow: 0 0 30px rgba(0,0,0,0.16);
+    backdrop-filter:blur(25px);
+    transform-origin:center;
+    transform: rotateY(10deg);
+    transition: all 800ms ease;
+}
+.login:hover{
+    transform: rotate(0deg);
+}
+select{
+    appearance: none;
+    outline:none;
+}
+option{
+    border-radius:8px;
+}
+@media only screen and (max-width:1536px){
+    .login-parent::before{
+        position:absolute;
+        content:"";
+        right:0;
+        top:0;
+        transform: translate(50%,-50%);
+        height:132px;
+        width:132px;
+        background:#00c9bd;
+        border-radius: 50%;
+        z-index: -1;
+    } 
+    .login-parent::after{
+        position:absolute;
+        content:"";
+        bottom:0;
+        left:0;
+        transform: translate(-50%,50%);
+        height:150px;
+        width:150px;
+        background:#e49129;
+        border-radius: 50%;
+        z-index: -1;
+    } 
+}
